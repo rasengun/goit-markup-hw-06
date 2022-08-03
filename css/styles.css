@@ -548,14 +548,21 @@ img {
 
   width: 30px;
   height: 30px;
+  fill: currentColor;
 
   background-color: var(--main-color);
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  background-image: url(../images/x.svg);
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
+
+  transition: fill 250ms var(--animation-timing-function);
+}
+
+.modal-close-button:hover,
+.modal-close-button:focus {
+  fill: var(--accent-color);
 }
 
 .form-field {
@@ -571,6 +578,10 @@ img {
   line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
+}
+
+.form-field.last {
+  margin-bottom: 0;
 }
 
 .form-field-title {
@@ -590,8 +601,8 @@ img {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  font-size: 12px;
-  line-height: 1.16;
+  font-size: 16px;
+  line-height: 1.25;
   letter-spacing: 0.01em;
 }
 
@@ -629,6 +640,10 @@ img {
   background-color: var(--button-second-color);
 }
 
+.form {
+  margin-bottom: 20px;
+}
+
 .form-field.policy {
   flex-direction: row;
   align-items: center;
@@ -651,7 +666,6 @@ img {
   height: 120px;
   resize: none;
   padding: 12px 16px;
-  margin-bottom: 20px;
 }
 
 .policy {
